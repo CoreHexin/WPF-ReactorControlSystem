@@ -1,0 +1,22 @@
+﻿<Window
+    x:Class="ReactorControlSystem.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:core="clr-namespace:ReactorControlSystem.Core;assembly=ReactorControlSystem.Core"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="{Binding Title}"
+    Width="1200"
+    Height="600"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CornerRadius="5" GlassFrameThickness="0" />
+    </WindowChrome.WindowChrome>
+    
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
+    </Grid>
+</Window>
