@@ -44,6 +44,8 @@ namespace ReactorControlSystem.Core.Helpers
             {
                 _errors.Remove(propertyName);
             }
+
+            ErrorsChanged.Invoke(this, new DataErrorsChangedEventArgs(propertyName));
         }
     }
 }
