@@ -70,8 +70,14 @@
                     <CheckBox Content="记住密码" />
                     <CheckBox HorizontalAlignment="Right" Content="自动登录" />
                 </Grid>
-                <Button Content="登录" />
+                <Button Command="{Binding LoginCommand}" Content="登录" />
             </StackPanel>
         </Grid>
+
+        <md:Snackbar
+            x:Name="snackbar"
+            Grid.ColumnSpan="2"
+            MessageQueue="{md:MessageQueue}" />
+
     </Grid>
 </UserControl>
