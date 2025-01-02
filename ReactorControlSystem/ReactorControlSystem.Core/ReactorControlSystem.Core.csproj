@@ -10,9 +10,9 @@
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Styles\" />
+    <Resource Include="Images\loginbg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\loginbg.png" />
+    <Folder Include="Styles\" />
   </ItemGroup>
 </Project>
