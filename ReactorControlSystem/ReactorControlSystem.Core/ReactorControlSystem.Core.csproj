@@ -7,13 +7,14 @@
     <None Remove="Images\loginbg.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\loginbg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Styles\" />
     <Folder Include="Services\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
 </Project>
