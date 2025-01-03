@@ -9,6 +9,7 @@
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.HardwareLoader\ReactorControlSystem.Modules.HardwareLoader.csproj" />
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Login\ReactorControlSystem.Modules.Login.csproj" />
     <ProjectReference Include="..\ReactorControlSystem.Core\ReactorControlSystem.Core.csproj" />
   </ItemGroup>

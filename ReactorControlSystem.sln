@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Modules.Login", "ReactorControlSystem\Modules\ReactorControlSystem.Modules.Login\ReactorControlSystem.Modules.Login.csproj", "{FE52EDC0-600A-456B-808D-540C60B2B605}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Modules.HardwareLoader", "ReactorControlSystem\Modules\ReactorControlSystem.Modules.HardwareLoader\ReactorControlSystem.Modules.HardwareLoader.csproj", "{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,16 @@ Global
 		{FE52EDC0-600A-456B-808D-540C60B2B605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE52EDC0-600A-456B-808D-540C60B2B605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE52EDC0-600A-456B-808D-540C60B2B605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE52EDC0-600A-456B-808D-540C60B2B605} = {F37AF5B8-9A1C-442B-9D88-22E49BCE6E6E}
+		{62C3A116-EB50-40CB-B7BB-C6CF4DFAA3E6} = {F37AF5B8-9A1C-442B-9D88-22E49BCE6E6E}
 	EndGlobalSection
 EndGlobal
