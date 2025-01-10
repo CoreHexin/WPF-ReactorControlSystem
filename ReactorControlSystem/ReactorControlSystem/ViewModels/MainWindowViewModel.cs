@@ -24,12 +24,16 @@ namespace ReactorControlSystem.ViewModels
 
         private DelegateCommand<string> _navigateCommand;
 
-        public DelegateCommand<string> NavigateCommand => 
+        public DelegateCommand<string> NavigateCommand =>
             _navigateCommand ??= new DelegateCommand<string>(Navigate);
 
         private DelegateCommand _unloadDevicesCommand;
         public DelegateCommand UnloadDevicesCommand =>
-            _unloadDevicesCommand ?? (_unloadDevicesCommand = new DelegateCommand(UnLoadDevices));
+            _unloadDevicesCommand ??= new DelegateCommand(UnLoadDevices);
+
+        private DelegateCommand _onLoadedCommand;
+        public DelegateCommand OnLoadedCommand =>
+            _onLoadedCommand ??= new DelegateCommand(OnLoaded);
 
         public MainWindowViewModel(IRegionManager regionManager, DevicesManager devicesManager)
         {
@@ -40,14 +44,22 @@ namespace ReactorControlSystem.ViewModels
 
         private void Navigate(string target)
         {
-            _regionManager.Regions[RegionNames.ContentRegion].RequestNavigate(target);
+            if (!string.IsNullOrEmpty(target))
+            {
+                _regionManager.Regions[RegionNames.ContentRegion].RequestNavigate(target);
+            }
         }
 
         private void LoadMenus()
         {
             Menus = new List<Menu>()
             {
-                new Menu() { Title = "首页", Icon = "Home" },
+                new Menu()
+                {
+                    Title = "首页",
+                    Icon = "Home",
+                    Target = ViewNames.HomeView,
+                },
                 new Menu() { Title = "1#反应釜", Icon = "Flask" },
                 new Menu() { Title = "2#反应釜", Icon = "Flask" },
                 new Menu() { Title = "加料泵操作", Icon = "FlaskEmptyPlusOutline" },
@@ -66,12 +78,18 @@ namespace ReactorControlSystem.ViewModels
             };
         }
 
+        private void OnLoaded()
+        {
+            SelectedMenu = Menus[0];
+            Navigate(ViewNames.HomeView);
+        }
+
         /// <summary>
         /// 当关闭窗口时, 卸载所有设备
         /// </summary>
         private void UnLoadDevices()
         {
-            _devicesManager.DisconnectAllAsync().Wait();
+            _devicesManager.DisconnectAll();
         }
     }
 }

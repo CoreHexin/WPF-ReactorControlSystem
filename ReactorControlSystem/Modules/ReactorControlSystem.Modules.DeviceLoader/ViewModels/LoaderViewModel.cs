@@ -95,8 +95,7 @@ namespace ReactorControlSystem.Modules.DeviceLoader.ViewModels
         {
             SuccessMessage = string.Empty;
             ErrorMessage = string.Empty;
-
-            await _devicesManager.DisconnectAllAsync();
+            _devicesManager.DisconnectAll();
             await LoadDevices();
         }
 

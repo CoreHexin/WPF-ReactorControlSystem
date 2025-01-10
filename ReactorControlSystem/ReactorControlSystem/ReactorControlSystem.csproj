@@ -12,6 +12,7 @@
     <ProjectReference Include="..\Devices\ReactorControlSystem.Devices.Reactor\ReactorControlSystem.Devices.Reactor.csproj" />
     <ProjectReference Include="..\Devices\ReactorControlSystem.Devices\ReactorControlSystem.Devices.csproj" />
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.DeviceLoader\ReactorControlSystem.Modules.DeviceLoader.csproj" />
+    <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Home\ReactorControlSystem.Modules.Home.csproj" />
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Login\ReactorControlSystem.Modules.Login.csproj" />
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Settings\ReactorControlSystem.Modules.Settings.csproj" />
     <ProjectReference Include="..\ReactorControlSystem.Core\ReactorControlSystem.Core.csproj" />

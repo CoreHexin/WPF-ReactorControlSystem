@@ -7,6 +7,7 @@ using ReactorControlSystem.Devices;
 using ReactorControlSystem.Devices.Reactor;
 using ReactorControlSystem.Modules.DeviceLoader;
 using ReactorControlSystem.Modules.DeviceLoader.Views;
+using ReactorControlSystem.Modules.Home;
 using ReactorControlSystem.Modules.Login;
 using ReactorControlSystem.Modules.Login.Views;
 using ReactorControlSystem.Modules.Settings;
@@ -35,6 +36,7 @@ namespace ReactorControlSystem
         {
             moduleCatalog.AddModule<LoginModule>();
             moduleCatalog.AddModule<DeviceLoaderModule>();
+            moduleCatalog.AddModule<HomeModule>();
             moduleCatalog.AddModule<SettingsModule>();
         }
 

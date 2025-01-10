@@ -28,12 +28,10 @@ namespace ReactorControlSystem.Devices
             };
         }
 
-        public async Task DisconnectAllAsync()
+        public void DisconnectAll()
         {
-            Task reactor1Result = Task.Run(() => _reactor1.Disconnect());
-            Task reactor2Result = Task.Run(() => _reactor2.Disconnect());
-
-            await Task.WhenAll(reactor1Result, reactor2Result);
+            _reactor1.Disconnect();
+            _reactor2.Disconnect();
         }
     }
 }

@@ -18,11 +18,14 @@
     </WindowChrome.WindowChrome>
 
     <i:Interaction.Triggers>
-        <i:EventTrigger EventName="Closing">
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding OnLoadedCommand}" />
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Closed">
             <i:InvokeCommandAction Command="{Binding UnloadDevicesCommand}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
