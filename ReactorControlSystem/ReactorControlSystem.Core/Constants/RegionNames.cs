@@ -1,4 +1,4 @@
-﻿namespace ReactorControlSystem.Core
+﻿namespace ReactorControlSystem.Core.Constants
 {
     public static class RegionNames
     {

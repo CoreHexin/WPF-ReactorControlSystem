@@ -9,6 +9,7 @@ using ReactorControlSystem.Modules.DeviceLoader;
 using ReactorControlSystem.Modules.DeviceLoader.Views;
 using ReactorControlSystem.Modules.Login;
 using ReactorControlSystem.Modules.Login.Views;
+using ReactorControlSystem.Modules.Settings;
 using ReactorControlSystem.Views;
 
 namespace ReactorControlSystem
@@ -34,6 +35,7 @@ namespace ReactorControlSystem
         {
             moduleCatalog.AddModule<LoginModule>();
             moduleCatalog.AddModule<DeviceLoaderModule>();
+            moduleCatalog.AddModule<SettingsModule>();
         }
 
         protected override void OnInitialized()
