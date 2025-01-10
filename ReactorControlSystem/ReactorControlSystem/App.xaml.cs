@@ -3,8 +3,10 @@ using System.Windows;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Services.Dialogs;
-using ReactorControlSystem.Modules.HardwareLoader;
-using ReactorControlSystem.Modules.HardwareLoader.Views;
+using ReactorControlSystem.Devices;
+using ReactorControlSystem.Devices.Reactor;
+using ReactorControlSystem.Modules.DeviceLoader;
+using ReactorControlSystem.Modules.DeviceLoader.Views;
 using ReactorControlSystem.Modules.Login;
 using ReactorControlSystem.Modules.Login.Views;
 using ReactorControlSystem.Views;
@@ -23,13 +25,15 @@ namespace ReactorControlSystem
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterSingleton<Reactor1RTUService>();
+            containerRegistry.RegisterSingleton<Reactor2RTUService>();
+            containerRegistry.RegisterSingleton<DevicesManager>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<LoginModule>();
-            moduleCatalog.AddModule<HardwareLoaderModule>();
+            moduleCatalog.AddModule<DeviceLoaderModule>();
         }
 
         protected override void OnInitialized()

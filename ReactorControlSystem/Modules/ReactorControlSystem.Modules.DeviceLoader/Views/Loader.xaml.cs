@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace ReactorControlSystem.Modules.HardwareLoader.Views
+namespace ReactorControlSystem.Modules.DeviceLoader.Views
 {
     /// <summary>
     /// Interaction logic for Loader

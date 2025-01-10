@@ -8,6 +8,7 @@
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Devices\ReactorControlSystem.Devices\ReactorControlSystem.Devices.csproj" />
     <ProjectReference Include="..\..\ReactorControlSystem.Core\ReactorControlSystem.Core.csproj" />
   </ItemGroup>
 </Project>

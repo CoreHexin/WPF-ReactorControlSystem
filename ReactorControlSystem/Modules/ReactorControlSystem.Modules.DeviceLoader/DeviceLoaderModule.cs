@@ -1,12 +1,12 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using ReactorControlSystem.Modules.HardwareLoader.ViewModels;
-using ReactorControlSystem.Modules.HardwareLoader.Views;
+using ReactorControlSystem.Modules.DeviceLoader.ViewModels;
+using ReactorControlSystem.Modules.DeviceLoader.Views;
 
-namespace ReactorControlSystem.Modules.HardwareLoader
+namespace ReactorControlSystem.Modules.DeviceLoader
 {
-    public class HardwareLoaderModule : IModule
+    public class DeviceLoaderModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
