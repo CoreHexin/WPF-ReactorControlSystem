@@ -2,7 +2,7 @@
 using NModbus;
 using NModbus.Serial;
 using ReactorControlSystem.Core.Enums;
-using ReactorControlSystem.Core.Models;
+using ReactorControlSystem.Repositories.Models;
 
 namespace ReactorControlSystem.Devices.Reactor
 {
@@ -10,15 +10,16 @@ namespace ReactorControlSystem.Devices.Reactor
     {
         private SerialPort? _serialPort;
         private IModbusMaster? _modbusMaster;
+        private CancellationTokenSource? _cts;
 
         public Device? Device { get; set; }
 
-        public abstract Device? GetDevice();
+        public abstract Task<Device?> GetDeviceAsync();
         public abstract Task<ushort> ReadTemperatureAsync();
 
-        public bool Connect()
+        public async Task<bool> ConnectAsync()
         {
-            Device = GetDevice();
+            Device = await GetDeviceAsync();
             if (Device == null)
             {
                 return false;
@@ -38,7 +39,6 @@ namespace ReactorControlSystem.Devices.Reactor
             try
             {
                 _serialPort.Open();
-                Thread.Sleep(1000);
             }
             catch (Exception ex)
             {
@@ -49,11 +49,14 @@ namespace ReactorControlSystem.Devices.Reactor
             Device.Status = DeviceStatus.Connected;
             var factory = new ModbusFactory();
             _modbusMaster = factory.CreateRtuMaster(_serialPort);
+            _cts = new CancellationTokenSource();
             return true;
         }
 
         public void Disconnect()
         {
+            _cts?.Cancel();
+
             if (_serialPort != null && _serialPort.IsOpen)
             {
                 _serialPort.Close();

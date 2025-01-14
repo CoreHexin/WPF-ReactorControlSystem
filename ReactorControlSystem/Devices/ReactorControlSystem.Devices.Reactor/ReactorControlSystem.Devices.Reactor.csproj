@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ReactorControlSystem.Core\ReactorControlSystem.Core.csproj" />
+    <ProjectReference Include="..\..\Repositories\ReactorControlSystem.Repositories\ReactorControlSystem.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

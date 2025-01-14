@@ -1,4 +1,4 @@
-﻿using ReactorControlSystem.Core.Models;
+﻿using ReactorControlSystem.Repositories.Models;
 using ReactorControlSystem.Devices.Reactor;
 
 namespace ReactorControlSystem.Devices
@@ -16,8 +16,8 @@ namespace ReactorControlSystem.Devices
 
         public async Task<List<Device?>> InitializeAllAsync() 
         { 
-            Task<bool> reactor1Result = Task.Run(() => _reactor1.Connect());
-            Task<bool> reactor2Result = Task.Run(() => _reactor2.Connect());
+            Task<bool> reactor1Result = _reactor1.ConnectAsync();
+            Task<bool> reactor2Result = _reactor2.ConnectAsync();
 
             await Task.WhenAll(reactor1Result, reactor2Result);
 

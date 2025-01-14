@@ -1,18 +1,20 @@
-﻿using ReactorControlSystem.Core.Models;
+﻿using ReactorControlSystem.Repositories.Models;
+using ReactorControlSystem.Repositories.Interfaces;
 
 namespace ReactorControlSystem.Devices.Reactor
 {
     public class Reactor1RTUService : ReactorRTU
     {
-        public override Device? GetDevice()
+        private readonly IDeviceRepository _deviceRepository;
+
+        public Reactor1RTUService(IDeviceRepository deviceRepository)
         {
-            // todo: 从数据库读取
-            var device = new Device()
-            {
-                Name = "1#反应釜",
-                PortName = "COM1"
-            };
-            return device;
+            _deviceRepository = deviceRepository;
+        }
+
+        public override async Task<Device?> GetDeviceAsync()
+        {
+            return await _deviceRepository.GetAsync("1#反应釜");
         }
 
         public override Task<ushort> ReadTemperatureAsync()
