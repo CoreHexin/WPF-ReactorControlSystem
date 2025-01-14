@@ -11,6 +11,9 @@ using ReactorControlSystem.Modules.Home;
 using ReactorControlSystem.Modules.Login;
 using ReactorControlSystem.Modules.Login.Views;
 using ReactorControlSystem.Modules.Settings;
+using ReactorControlSystem.Repositories.Data;
+using ReactorControlSystem.Repositories.Interfaces;
+using ReactorControlSystem.Repositories.Repositories;
 using ReactorControlSystem.Views;
 
 namespace ReactorControlSystem
@@ -30,6 +33,9 @@ namespace ReactorControlSystem
             containerRegistry.RegisterSingleton<Reactor1RTUService>();
             containerRegistry.RegisterSingleton<Reactor2RTUService>();
             containerRegistry.RegisterSingleton<DevicesManager>();
+
+            containerRegistry.Register<AppDbContext>();
+            containerRegistry.Register<IDeviceRepository, DeviceRepository>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

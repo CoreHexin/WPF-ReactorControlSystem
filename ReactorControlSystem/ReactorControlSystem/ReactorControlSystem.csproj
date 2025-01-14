@@ -6,6 +6,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
@@ -16,5 +20,6 @@
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Login\ReactorControlSystem.Modules.Login.csproj" />
     <ProjectReference Include="..\Modules\ReactorControlSystem.Modules.Settings\ReactorControlSystem.Modules.Settings.csproj" />
     <ProjectReference Include="..\ReactorControlSystem.Core\ReactorControlSystem.Core.csproj" />
+    <ProjectReference Include="..\Repositories\ReactorControlSystem.Repositories\ReactorControlSystem.Repositories.csproj" />
   </ItemGroup>
 </Project>
