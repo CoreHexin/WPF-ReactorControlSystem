@@ -6,9 +6,8 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using ReactorControlSystem.Core.Enums;
-using ReactorControlSystem.Core.Models;
 using ReactorControlSystem.Devices;
-
+using ReactorControlSystem.Repositories.Models;
 
 namespace ReactorControlSystem.Modules.DeviceLoader.ViewModels
 {
@@ -64,6 +63,7 @@ namespace ReactorControlSystem.Modules.DeviceLoader.ViewModels
             IsLoading = true;
 
             List<Device> devices = await _devicesManager.InitializeAllAsync();
+
             if (devices.All(device => device != null && device.Status == DeviceStatus.Connected))
             {
                 RequestClose.Invoke(new DialogResult(ButtonResult.OK));
@@ -71,6 +71,20 @@ namespace ReactorControlSystem.Modules.DeviceLoader.ViewModels
             }
 
             IsLoading = false;
+
+            ShowLoadResult(devices);
+        }
+
+        private void ShowLoadResult(List<Device> devices)
+        {
+            SuccessMessage = string.Empty;
+            ErrorMessage = string.Empty;
+
+            if (devices.All(device => device == null))
+            {
+                ErrorMessage = "暂未设置初始化设备";
+                return;
+            }
 
             var successDeviceNames = devices
                 .Where(device => device != null && device.Status == DeviceStatus.Connected)
@@ -82,8 +96,15 @@ namespace ReactorControlSystem.Modules.DeviceLoader.ViewModels
                 .Select(device => device.Name)
                 .ToList();
 
-            SuccessMessage = $"{string.Join(',', successDeviceNames)} 加载成功";
-            ErrorMessage = $"{string.Join(',', errorDeviceNames)} 加载失败";
+            if (successDeviceNames.Any())
+            {
+                SuccessMessage = $"{string.Join(',', successDeviceNames)} 加载成功";
+            }
+
+            if (errorDeviceNames.Any())
+            {
+                ErrorMessage = $"{string.Join(',', errorDeviceNames)} 加载失败";
+            }
         }
 
         private void SkipLoad()
