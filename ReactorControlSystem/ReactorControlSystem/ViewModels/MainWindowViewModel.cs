@@ -3,8 +3,8 @@ using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
 using ReactorControlSystem.Core.Constants;
-using ReactorControlSystem.Core.Models;
 using ReactorControlSystem.Devices;
+using ReactorControlSystem.Models;
 
 namespace ReactorControlSystem.ViewModels
 {

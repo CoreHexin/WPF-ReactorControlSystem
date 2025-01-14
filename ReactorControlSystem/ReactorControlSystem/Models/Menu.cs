@@ -1,4 +1,4 @@
-﻿namespace ReactorControlSystem.Core.Models
+﻿namespace ReactorControlSystem.Models
 {
     public class Menu
     {

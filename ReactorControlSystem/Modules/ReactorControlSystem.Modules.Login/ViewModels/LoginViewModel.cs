@@ -6,7 +6,7 @@ using Prism.Events;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 using ReactorControlSystem.Core.Events;
-using ReactorControlSystem.Core.Models;
+using ReactorControlSystem.Modules.Login.Models;
 
 namespace ReactorControlSystem.Modules.Login.ViewModels
 {

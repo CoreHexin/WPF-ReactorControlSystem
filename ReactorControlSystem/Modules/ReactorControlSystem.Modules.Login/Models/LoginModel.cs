@@ -1,7 +1,7 @@
 ﻿using ReactorControlSystem.Core.Helpers;
 using System.ComponentModel.DataAnnotations;
 
-namespace ReactorControlSystem.Core.Models
+namespace ReactorControlSystem.Modules.Login.Models
 {
     public class LoginModel : NotifyDataErrorInfo
     {
@@ -11,7 +11,7 @@ namespace ReactorControlSystem.Core.Models
         public string Username
         {
             get { return _username; }
-            set 
+            set
             {
                 if (SetProperty(ref _username, value))
                 {
@@ -26,8 +26,8 @@ namespace ReactorControlSystem.Core.Models
         public string Password
         {
             get { return _password; }
-            set 
-            { 
+            set
+            {
                 if (SetProperty(ref _password, value))
                 {
                     Validate(nameof(Password), value);
