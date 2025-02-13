@@ -60,7 +60,12 @@ namespace ReactorControlSystem.ViewModels
                     Icon = "Home",
                     Target = ViewNames.HomeView,
                 },
-                new Menu() { Title = "1#反应釜", Icon = "Flask" },
+                new Menu()
+                {
+                    Title = "1#反应釜",
+                    Icon = "Flask",
+                    Target = ViewNames.ReactorView,
+                },
                 new Menu() { Title = "2#反应釜", Icon = "Flask" },
                 new Menu() { Title = "加料泵操作", Icon = "FlaskEmptyPlusOutline" },
                 new Menu()

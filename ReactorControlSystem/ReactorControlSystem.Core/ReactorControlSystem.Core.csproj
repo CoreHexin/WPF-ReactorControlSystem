@@ -4,16 +4,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Images\balance.png" />
+    <None Remove="Images\feeding.png" />
     <None Remove="Images\loginbg.png" />
+    <None Remove="Images\reactor.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
     <PackageReference Include="Prism.Wpf" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\balance.png" />
+    <Resource Include="Images\feeding.png" />
     <Resource Include="Images\loginbg.png" />
+    <Resource Include="Images\reactor.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Styles\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

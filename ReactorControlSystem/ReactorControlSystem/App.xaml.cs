@@ -10,6 +10,7 @@ using ReactorControlSystem.Modules.DeviceLoader.Views;
 using ReactorControlSystem.Modules.Home;
 using ReactorControlSystem.Modules.Login;
 using ReactorControlSystem.Modules.Login.Views;
+using ReactorControlSystem.Modules.Reactor;
 using ReactorControlSystem.Modules.Settings;
 using ReactorControlSystem.Repositories.Data;
 using ReactorControlSystem.Repositories.Interfaces;
@@ -44,6 +45,7 @@ namespace ReactorControlSystem
             moduleCatalog.AddModule<DeviceLoaderModule>();
             moduleCatalog.AddModule<HomeModule>();
             moduleCatalog.AddModule<SettingsModule>();
+            moduleCatalog.AddModule<ReactorModule>();
         }
 
         protected override void OnInitialized()

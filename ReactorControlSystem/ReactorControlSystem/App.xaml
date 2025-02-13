@@ -13,6 +13,8 @@
                     PrimaryColor="BlueGrey"
                     SecondaryColor="LightBlue" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign2.Defaults.xaml" />
+
+                <ResourceDictionary Source="pack://application:,,,/ReactorControlSystem.Core;component/Styles/Checkboxes.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

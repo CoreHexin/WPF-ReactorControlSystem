@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Module
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Repositories", "ReactorControlSystem\Repositories\ReactorControlSystem.Repositories\ReactorControlSystem.Repositories.csproj", "{68734C58-DD8E-46AE-8585-49E9F4298187}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorControlSystem.Modules.Reactor", "ReactorControlSystem\Modules\ReactorControlSystem.Modules.Reactor\ReactorControlSystem.Modules.Reactor.csproj", "{FF825863-8811-48C8-94E8-53AD06657CA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{68734C58-DD8E-46AE-8585-49E9F4298187}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68734C58-DD8E-46AE-8585-49E9F4298187}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68734C58-DD8E-46AE-8585-49E9F4298187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF825863-8811-48C8-94E8-53AD06657CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF825863-8811-48C8-94E8-53AD06657CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF825863-8811-48C8-94E8-53AD06657CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF825863-8811-48C8-94E8-53AD06657CA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,5 +84,6 @@ Global
 		{F9D703B5-8775-45BC-8C3D-71A8E8739002} = {E6440CA1-7110-48D2-AF14-CD99A637D431}
 		{0D7DC259-7210-44E0-BBC8-56FA1627E363} = {E6440CA1-7110-48D2-AF14-CD99A637D431}
 		{BC15A197-EB65-441B-AD3F-3D69C4EF07EE} = {F37AF5B8-9A1C-442B-9D88-22E49BCE6E6E}
+		{FF825863-8811-48C8-94E8-53AD06657CA8} = {F37AF5B8-9A1C-442B-9D88-22E49BCE6E6E}
 	EndGlobalSection
 EndGlobal
